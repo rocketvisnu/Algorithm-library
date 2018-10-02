@@ -1,4 +1,4 @@
-//The map is used to store the pair in terms of key value pair . it contains only unique keys.
+//The multimap is used to store the pair in terms of key value pair . it contains duplicate keys unlike map.
 
 #include<iostream>
 #include<utility>
@@ -6,14 +6,15 @@
 using namespace std;
 
 int main(){
-   map <int,int> set1;
+   multimap <int,int> set1;
    set1.insert(pair <int,int> (1,10));
    set1.insert(pair <int,int> (2,20));
    set1.insert(pair <int,int> (3,30));
    set1.insert(pair <int,int> (4,40));
    set1.insert(pair <int,int> (5,50));
-   set1.insert(pair <int,int> (3,30));   //Does not insert as this element has been inserted already. 
-   map<int,int> :: iterator it;
+   set1.insert(pair <int,int> (3,30)); 
+   set1.insert(pair <int,int> (5,50)); 
+   multimap<int,int> :: iterator it;
    for(it=set1.begin();it!=set1.end();it++){
        cout<<it->first<<" "<<it->second<<"\n";
    }
