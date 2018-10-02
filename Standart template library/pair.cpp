@@ -1,3 +1,5 @@
+//Pair is used to store the pair values in the same order as the user enters , it can have duplicate values also.
+
 #include<iostream>
 #include<utility>
 using namespace std;
@@ -6,7 +8,7 @@ int main(){
     pair<int,char> pair1(0,'a');
     pair<int,char> pair2;
     pair<int,char> pair3(pair1);
-    pair2 = make_pair(1,'b');
+    pair2 = make_pair(1,'b');   // this function is used to add a pair 
     cout<<"Before Swapping\n";
     cout<<pair1.first<<" ";
     cout<<pair1.second<<"\n";

@@ -1,15 +1,18 @@
+//The map is used to store the pair in terms of key value pair . it contains only unique keys.
+
 #include<iostream>
 #include<utility>
 #include<map>
 using namespace std;
 
 int main(){
- map <int,int> set1;
+   map <int,int> set1;
    set1.insert(pair <int,int> (1,10));
    set1.insert(pair <int,int> (2,20));
    set1.insert(pair <int,int> (3,30));
    set1.insert(pair <int,int> (4,40));
    set1.insert(pair <int,int> (5,50));
+    set1.insert(pair <int,int> (3,30));   // this element is not added as it is a duplicate.
    map<int,int> :: iterator it;
    for(it=set1.begin();it!=set1.end();it++){
        cout<<it->first<<" "<<it->second<<"\n";

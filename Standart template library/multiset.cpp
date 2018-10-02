@@ -1,4 +1,4 @@
-//Set is used to act as container which stores unique elements
+//multiset is used to act as container which stores duplicate elements unlike set.
 
 #include<iostream>
 #include<utility>
@@ -6,14 +6,17 @@
 using namespace std;
 
 int main(){
-   set <int> set1;
+   multiset <int> set1;
    set1.insert(1);
    set1.insert(2);
    set1.insert(3);
    set1.insert(4);
    set1.insert(5);
    set1.insert(6);
-   set<int,char> :: iterator it;
+   set1.insert(3);
+   set1.insert(4);
+   set1.insert(5);
+   multiset<int,char> :: iterator it;
    for(it=set1.begin();it!=set1.end();it++){
        cout<<*it<<" ";
    }
